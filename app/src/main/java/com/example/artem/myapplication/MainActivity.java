@@ -24,7 +24,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.Amain, new PlaceholderFragment())
                     .commit();
         }
     }
@@ -75,7 +75,7 @@ public class MainActivity extends ActionBarActivity {
             };
             List<String> items = new ArrayList<>(Arrays.asList(itemsArray));
             ArrayAdapter<String> adapter = new ArrayAdapter<>(getActivity(),
-                    R.layout.list_item_forecast,R.id.list_item_forecast_textview,items);
+                    R.layout.list_item_forecast,R.id.list_item_forecast_text,items);
             ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
             listView.setAdapter(adapter);
             return rootView;
